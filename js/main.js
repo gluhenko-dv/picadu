@@ -19,10 +19,6 @@ const loginSignup = document.querySelector('.login-signup');
 const userElem = document.querySelector('.user');
 const userNameElem = document.querySelector('.user-name');
 
-
-
-
-
 const listUser = [{
     id: '01',
     email: 'admin@admin',
