@@ -49,7 +49,7 @@ const setUsers = {
   },
   signUp(email, password, handler) {
     if (!this.getUser(email)){
-      const user = {email, password, displayName: email};
+      const user = {email, password, displayName: email.split('@',1)};
       listUser.push(user);
       this.authorizedUser(user);
       handler();
