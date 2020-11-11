@@ -1,35 +1,41 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: sans-serif;
   background: #e5e5e5;
 }
+
 .header {
-  background: #fa8c16;
+  margin-bottom: 30px;
   padding-top: 16px;
   padding-bottom: 16px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: #fa8c16;
 }
+
 .header-wrapper {
-  max-width: 1200px;
-  width: 90%;
-  margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+  max-width: 1200px;
 }
+
 .header-nav {
   margin-left: 60px;
   margin-right: auto;
 }
+
 .header-menu {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .header-menu-link {
   text-decoration: none;
   color: #fafafa;
@@ -37,6 +43,7 @@ body {
   font-size: 14px;
   line-height: 22px;
 }
+
 .input-group {
   max-width: 237px;
   width: 60%;
@@ -47,6 +54,7 @@ body {
   overflow: hidden;
   border: 1px solid #d9d9d9;
 }
+
 .search-input {
   width: 80%;
   height: 100%;
@@ -55,6 +63,7 @@ body {
   line-height: 22px;
   padding-left: 12px;
 }
+
 .search-button {
   height: 100%;
   width: 20%;
@@ -68,24 +77,31 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .search-input::-moz-placeholder {
   color: #bfbfbf;
 }
+
 .search-input::-webkit-input-placeholder {
   color: #bfbfbf;
 }
+
 .search-input:-ms-input-placeholder {
   color: #bfbfbf;
 }
+
 .search-input::-ms-input-placeholder {
   color: #bfbfbf;
 }
+
 .search-input::placeholder {
   color: #bfbfbf;
 }
+
 .menu-toggle {
   display: none;
 }
+
 .content {
   max-width: 1200px;
   width: 90%;
@@ -94,20 +110,24 @@ body {
   align-items: flex-start;
   justify-content: space-between;
 }
+
 .posts {
   width: 67%;
 }
+
 .post {
   background-color: #fff;
   border: 1px solid #e8e8e8;
   margin-bottom: 30px;
 }
+
 .post-body {
   padding-top: 35px;
   padding-left: 35px;
   padding-right: 35px;
   padding-bottom: 0;
 }
+
 .post-title {
   margin-top: 0;
   margin-bottom: 19px;
@@ -115,15 +135,18 @@ body {
   font-size: 16px;
   line-height: 24px;
 }
+
 .post-text {
   color: #262626;
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
 }
+
 .tags {
   margin-bottom: 22px;
 }
+
 .tag {
   color: #bfbfbf;
   font-size: 14px;
@@ -131,6 +154,7 @@ body {
   margin-right: 10px;
   text-decoration: none;
 }
+
 .post-footer {
   border-top: 1px solid #e8e8e8;
   background: #fafafa;
@@ -141,17 +165,21 @@ body {
   padding-top: 13px;
   padding-bottom: 13px;
 }
+
 .post-buttons {
   display: flex;
   align-items: center;
 }
+
 .post-button .icon {
   fill: #8c8c8c;
 }
+
 .icon-like,
 .icon-comment {
   margin-right: 6px;
 }
+
 .post-button {
   background-color: transparent;
   border: none;
@@ -163,17 +191,20 @@ body {
   margin-right: 19px;
   cursor: pointer;
 }
+
 .post-author {
   display: flex;
   align-items: center;
   text-align: right;
 }
+
 .author-avatar {
   width: 34px;
   height: 34px;
   margin-left: 9px;
   border-radius: 4px;
 }
+
 .author-username {
   display: block;
   color: #8c8c8c;
@@ -181,15 +212,18 @@ body {
   line-height: 20px;
   text-decoration: none;
 }
+
 .post-time {
   color: #bfbfbf;
   font-size: 12px;
   line-height: 20px;
 }
 
+
 .sidebar {
   width: 31%;
 }
+
 .login{
   background-color: #fafafa;
   border: 1px solid #e8e8e8;
@@ -197,10 +231,12 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
 .login-form{
   display: flex;
   flex-direction: column;
 }
+
 .login-title {
   text-align: center;
   margin-bottom: 10px;
@@ -208,6 +244,7 @@ body {
   font-weight: 600;
   color: #595959;
 }
+
 .login-input{
   display: block;
   background-color: #fff;
@@ -215,6 +252,7 @@ body {
   padding: 5px 15px;
   margin-bottom: 15px;
 }
+
 .login-forget{
   text-align: center;
   font-size: 12px;
@@ -223,6 +261,7 @@ body {
   margin-bottom: 10px;
   font-style: italic;
 }
+
 .login-sigin {
   background-color: #faad14;
   border: none;
@@ -233,12 +272,15 @@ body {
   font-size: 12px;
   margin-bottom: 15px;
 }
+
 .login-sigin:hover {
   filter: opacity(80%);
 }
+
 .login-sigin:active{
   filter: brightness(85%);
 }
+
 .login-signup{
   text-align: center;
   font-size: 12px;
@@ -247,6 +289,7 @@ body {
   margin-bottom: 10px;
   text-transform: uppercase;
 }
+
 .user {
   background-color: #fafafa;
   border: 1px solid #e8e8e8;
@@ -255,30 +298,36 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
 .user-info {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
+
 .user-avatar {
   border-radius: 50%;
   margin-right: 17px;
 }
+
 .user-name {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: #595959;
 }
+
 .icon-exit {
   width: 20px;
   height: 20px;
   fill: #000;
 }
+
 .sidebar-nav {
   background-color: #fff;
   display: none;
 }
+
 .sidebar-menu {
   margin: 0;
   border: 1px solid #e8e8e8;
@@ -286,6 +335,7 @@ body {
   list-style-type: none;
   padding: 0;
 }
+
 .sidebar-menu-link {
   text-decoration: none;
   font-size: 14px;
@@ -296,13 +346,16 @@ body {
   width: 100%;
   background-color: #fff;
 }
+
 .sidebar-menu-link:hover {
   background-color: #fffbe6;
 }
+
 .sidebar-menu-link.active {
   background-color: #fffbe6;
   border-right: 3px solid #faad14;
 }
+
 .button {
   background: #faad14;
   border-radius: 4px;
@@ -315,6 +368,7 @@ body {
   padding: 13px;
   cursor: pointer;
 }
+
 .button-outline {
   background: #ffffff;
   border: 1px solid #ffc53d;
@@ -324,11 +378,13 @@ body {
   padding-right: 16px;
   cursor: pointer;
 }
+
 .button-outline .icon {
   width: 14px;
   height: 11px;
   fill: #ffc53d;
 }
+
 .button-new-post {
   display: none;
   align-items: center;
@@ -336,22 +392,26 @@ body {
   width: 100%;
   margin-top: 20px;
 }
+
 .icon-fire {
   fill: #fff;
   width: 11px;
   height: 13px;
   margin-right: 10px;
 }
+
 .card {
   background: #ffffff;
   border: 1px solid #e8e8e8;
   margin-top: 20px;
 }
+
 .card-header {
   background: #fafafa;
   border-bottom: 1px solid #e8e8e8;
   padding: 23px 25px;
 }
+
 .card-title {
   margin: 0;
   font-weight: 600;
@@ -359,9 +419,11 @@ body {
   line-height: 24px;
   color: #595959;
 }
+
 .card-body {
   padding: 22px 40px 20px 25px;
 }
+
 .card-body-title {
   text-decoration: none;
   margin: 0 0 10px;
@@ -370,12 +432,14 @@ body {
   line-height: 24px;
   color: #d48806;
 }
+
 .card-text {
   font-size: 14px;
   line-height: 22px;
   color: #262626;
   margin: 10px 0;
 }
+
 .ad {
   display: block;
   background-color: #fff;
@@ -389,6 +453,7 @@ body {
   margin-top: 20px;
   position: relative;
 }
+
 .ad::before {
   content: "Реклама";
   position: absolute;
@@ -402,10 +467,12 @@ body {
   text-align: center;
   color: #ffffff;
 }
+
 .add-post {
   display: flex;
   flex-direction: column;
 }
+
 .add-title,
 .add-text {
   background: #ffffff;
@@ -413,17 +480,21 @@ body {
   padding: 23px 30px;
   margin-bottom: 16px;
 }
+
 .add-text {
   min-height: 362px;
 }
+
 .add-button {
   width: 100%;
   max-width: 370px;
   margin-right: 2%;
 }
+
 .add-post .button-outline {
   margin-right: 1%;
 }
+
 @media (max-width: 990px) {
   .menu-toggle {
     display: flex;
@@ -433,11 +504,13 @@ body {
     height: 20px;
     margin-left: 12px;
   }
+
   .menu-toggle span {
     height: 2px;
     width: 100%;
     background-color: #fff;
   }
+
   .header {
     position: fixed;
     z-index: 100;
@@ -446,10 +519,12 @@ body {
     right: 0;
     width: 100%;
   }
+
   .content {
     margin-top: 94px;
     margin-bottom: 60px;
   }
+
   .sidebar {
     position: fixed;
     z-index: 101;
@@ -466,51 +541,67 @@ body {
     transition: transform 0.2s;
     overflow-y: auto;
   }
+
   .sidebar.visible {
     transform: translateX(0);
   }
+
   .posts {
     width: 100%;
   }
+
   .header-nav {
     display: none;
   }
+
   .header-menu {
     width: 90%;
     margin: auto;
   }
+
 }
+
 @media (max-width: 676px) {
   .add-buttons {
     display: flex;
     flex-direction: column;
   }
+
   .add-button {
     width: 100%;
     max-width: 100%;
   }
+
   .add-post .button-outline {
     margin-right: 0;
     margin-top: 10px;
   }
+
 }
+
 @media (max-width: 576px) {
   .post-footer {
     flex-direction: column;
   }
+
   .post-author {
     margin-top: 15px;
   }
+
   .author-avatar {
     margin-left: 0;
     margin-right: 10px;
   }
+
   .author-about {
     order: 2;
     text-align: left;
   }
 
+
   .add-button {
     width: 100%;
   }
+
 }
+

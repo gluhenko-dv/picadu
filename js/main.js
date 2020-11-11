@@ -49,7 +49,7 @@ const setUsers = {
   },
   signUp(email, password, handler) {
     if (!this.getUser(email)){
-      const user = {email, password, displayName: email.split('@',1)};
+      const user = {email, password, displayName: email.split('@')[0]};
       listUser.push(user);
       this.authorizedUser(user);
       handler();
@@ -84,7 +84,6 @@ loginForm.addEventListener('submit', event => {
   const emailValue = emailInput.value;
   const passwordlValue = passwordInput.value;
   setUsers.logIn(emailValue, passwordlValue, toggleAuthDom);
-  toggleAuthDom();
 });
 
 loginSignup.addEventListener('click', event => {
@@ -92,7 +91,6 @@ loginSignup.addEventListener('click', event => {
   const emailValue = emailInput.value;
   const passwordlValue = passwordInput.value;
   setUsers.signUp(emailValue, passwordlValue, toggleAuthDom);
-  toggleAuthDom();
 });
 
 toggleAuthDom();
