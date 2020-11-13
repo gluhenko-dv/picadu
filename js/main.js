@@ -8,7 +8,10 @@ menuToggle.addEventListener('click', function (event) {
   event.preventDefault();
   // вешаем класс на меню, когда кликнули по кнопке меню
   menu.classList.toggle('visible');
-})
+});
+
+const regExpValidEmail = /^\w+@\w+\.\w{2,}$/;
+
 
 const loginElem = document.querySelector('.login');
 const loginForm = document.querySelector('.login-form');
@@ -19,9 +22,17 @@ const loginSignup = document.querySelector('.login-signup');
 const userElem = document.querySelector('.user');
 const userNameElem = document.querySelector('.user-name');
 
+const exitElem = document.querySelector('.exit');
+const editElem = document.querySelector('.edit');
+const editContainer = document.querySelector('.edit-container');
+
+const editUsername = document.querySelector('.edit-username');
+const editPhotoURL = document.querySelector('.edit-photo');
+
+
 const listUser = [{
     id: '01',
-    email: 'admin@admin',
+    email: 'admin@admin.ru',
     password: '12345',
     displayName: 'admin'
   },
@@ -36,6 +47,7 @@ const listUser = [{
 const setUsers = {
   user: null,
   logIn(email, password, handler) {
+    if(!regExpValidEmail.test(email)) return alert('Email не валиден');
     const user = this.getUser(email);
     if (user && user.password === password){
       this.authorizedUser(user);
@@ -44,10 +56,16 @@ const setUsers = {
       alert('Пользователь с такими данными не найден');
     }
   },
-  logOut() {
-    console.log("выход");
+  logOut(handler) {
+    this.user = null;
+    handler();
   },
   signUp(email, password, handler) {
+    if(!regExpValidEmail.test(email)) return alert('Email не валиден');
+    if (!email.trim() || !password.trim()){
+      alert('Введите данные')
+      return;
+    }
     if (!this.getUser(email)){
       const user = {email, password, displayName: email.split('@')[0]};
       listUser.push(user);
@@ -84,6 +102,7 @@ loginForm.addEventListener('submit', event => {
   const emailValue = emailInput.value;
   const passwordlValue = passwordInput.value;
   setUsers.logIn(emailValue, passwordlValue, toggleAuthDom);
+  loginForm.reset();
 });
 
 loginSignup.addEventListener('click', event => {
@@ -91,6 +110,17 @@ loginSignup.addEventListener('click', event => {
   const emailValue = emailInput.value;
   const passwordlValue = passwordInput.value;
   setUsers.signUp(emailValue, passwordlValue, toggleAuthDom);
+  loginForm.reset();
+});
+
+exitElem.addEventListener('click', event =>{
+  event.preventDefault();
+  setUsers.logOut(toggleAuthDom);
+});
+
+editElem.addEventListener('click', event =>{
+  event.preventDefault();
+  editContainer.classList.toggle('visible');
 });
 
 toggleAuthDom();

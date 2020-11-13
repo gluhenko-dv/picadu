@@ -225,15 +225,8 @@
       <div class="login">
         <form class="login-form">
           <h2 class="login-title">Авторизация</h2>
-          <input type="email" class="login-input login-email" 
-            name="email" 
-            minlength="3" 
-            required 
-            placeholder="логин">
-          <input type="password" class="login-input login-password" 
-            name="password" 
-            minlength="3" 
-            required
+          <input type="email" class="login-input login-email" name="email" minlength="3" required placeholder="логин">
+          <input type="password" class="login-input login-password" name="password" minlength="3" required
             placeholder="пароль">
           <a href="#" class="login-forget">Забыли пароль</a>
           <button class="login-sigin" type="submit">Войти</button>
@@ -241,17 +234,32 @@
         </form>
       </div>
       <div class="user">
-        <a href="#" class="user-info">
-          <img width="40" height="40" src="img/avatar.jpeg" alt="photo: user" class="user-avatar">
-          <span class="user-name">islamovartem</span>
-        </a>
-        <!-- /.user-info -->
-        <a href="#" class="exit">
-          <svg class="icon icon-exit">
-            <use xlink:href="img/icons.svg#exit"></use>
-          </svg>
-        </a>
-        <!-- /.exit -->
+        <div class="user-container">
+          <a href="#" class="user-info">
+            <img width="40" height="40" src="img/avatar.jpeg" alt="photo: user" class="user-avatar">
+            <span class="user-name">islamovartem</span>
+          </a>
+          <a href="#" class="edit">
+            <img class="icon icon-edit" src="img/edit-button.svg" alt="редактирование">
+          </a>
+          <!-- /.user-info -->
+          <a href="#" class="exit">
+            <svg class="icon icon-exit">
+              <use xlink:href="img/icons.svg#exit"></use>
+            </svg>
+          </a>
+          <!-- /.exit -->
+        </div>
+        <form class="edit-container">
+          <h2 class="edit-title">Редактировать</h2>
+          <label class="edit-label">Ваш логин
+            <input type="text" class="edit-input edit-username" name="username" minlength="3" placeholder="логин">
+          </label>
+          <label class="edit-label">Ваше фото
+            <input type="text" class="edit-input edit-photo" name="photo" minlength="3" placeholder="url-photo">
+          </label>
+          <button class="edit-btn">Сохранить</button>
+        </form>
       </div>
       <!-- /.user -->
       <nav class="sidebar-nav">
