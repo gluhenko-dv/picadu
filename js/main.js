@@ -96,7 +96,7 @@ const setUsers = {
   signUp(email, password, handler) {
     if (!regExpValidEmail.test(email)) return alert('Email не валиден');
     if (!email.trim() || !password.trim()) {
-      alert('Введите данные')
+      alert('Введите данные');
       return;
     }
 
@@ -161,16 +161,13 @@ const setUsers = {
   sendForget(email) {
     firebase.auth().sendPasswordResetEmail(email)
       .then(() => {
-        alert("Письмо отправлено")
+        alert("Письмо отправлено");
       })
       .catch(err => {
         console.log(err);
       });
   }
-
-
 };
-
 
 const loginForget = document.querySelector('.login-forget');
 
@@ -357,11 +354,11 @@ const init = () => {
     } = addPostElem.elements;
 
     if (title.value.length < 4) {
-      alert('Слишком короткий заголовок')
+      alert('Слишком короткий заголовок');
       return;
     }
     if (text.value.length < 10) {
-      alert('Слишком короткий пост')
+      alert('Слишком короткий пост');
       return;
     }
 
